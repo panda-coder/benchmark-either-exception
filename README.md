@@ -16,21 +16,30 @@ node run.js
 
 
 ```
-# AVRO to Buffer
-ok ~300 ms (0 s + 299901807 ns)
+# Testing Success Right
+ok ~23 ms (0 s + 23317559 ns)
 
-# AVRO from Buffer
-ok ~54 ms (0 s + 53940042 ns)
+# Testing Fail Right
+ok ~27 ms (0 s + 26789218 ns)
 
-# JSON Parse
-ok ~122 ms (0 s + 122406043 ns)
+# Testing Success Left
+ok ~30 ms (0 s + 29975871 ns)
 
-# JSON Stringfy
-ok ~118 ms (0 s + 117742443 ns)
+# Testing Fail Left
+ok ~28 ms (0 s + 27768675 ns)
 
-# Simdjson JSON Parse
-ok ~403 ms (0 s + 402922638 ns)
+# Simple Throw exception
+ok ~212 ms (0 s + 212490447 ns)
+
+# Obj Throw exception
+ok ~219 ms (0 s + 218665496 ns)
+
+# Error Throw exception
+ok ~772 ms (0 s + 771635225 ns)
+
+# Any Throw exception
+ok ~863 ms (0 s + 863068894 ns)
 
 all benchmarks completed
-ok ~997 ms (0 s + 996912973 ns)
+ok ~2.17 s (2 s + 173711385 ns)
 ```
