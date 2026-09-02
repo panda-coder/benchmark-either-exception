@@ -1,37 +1,20 @@
 const assert = require('assert')
 
 const {
-    Left,
-    Right
+    retLeft,
+    retRight
 } = require('./either')
 
-const retLeft = (value) => {
-    return new Left(value)
-}
+describe('Either class basic tests', () => {
+    it('should correctly identify Left', () => {
+        const testLeft = retLeft("1")
+        assert.strictEqual(testLeft.isLeft(), true)
+        assert.strictEqual(testLeft.isRight(), false)
+    })
 
-const retRight = (value) => {
-    return new Right(value)
-}
-
-const doTestLeft = () => {
-    const testLeft = retLeft("1")
-
-    assert.equal(testLeft.isLeft(), true)
-    assert.equal(testLeft.isRight(), false)
-}
-
-const doTestRight = () => {
-    const testRight = retRight("1")
-
-    assert.equal(testRight.isLeft(), false)
-    assert.equal(testRight.isRight(), true)
-}
-
-doTestLeft()
-doTestRight()
-
-
-
-
-
-
+    it('should correctly identify Right', () => {
+        const testRight = retRight("1")
+        assert.strictEqual(testRight.isLeft(), false)
+        assert.strictEqual(testRight.isRight(), true)
+    })
+})
