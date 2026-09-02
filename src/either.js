@@ -40,12 +40,12 @@ class Right extends Either {
 }
 
 
-const retLeft = () => {
-    return new Left("Gotcha")
+const retLeft = (val = "Error occurred") => {
+    return new Left(val)
 }
 
-const retRight = () => {
-    return new Left("Gotcha")
+const retRight = (val = "Operation successful") => {
+    return new Right(val)
 }
 
 module.exports = {
